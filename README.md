@@ -17,15 +17,6 @@ What things you need to install the software and how to install them.
 - Maven 3.2+
 - Spring Boot 2.x
 
-### Installing
-
-A step-by-step series of examples that tell you how to get a development environment running.
-
-1. **Clone the repository**
-
-```bash
-git clone https://AK016.com/ProspectaAssignment.git
-cd yourproject
 
 ##Usage
 1. Fetching APIs by Category
