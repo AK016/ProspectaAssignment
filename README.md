@@ -30,14 +30,14 @@ No specific installation steps required beyond setting up your development envir
 To retrieve a list of APIs by a specific category, use the following endpoint:
 
 ```http
-GET /byCategory?category=Animals
+GET http://localhost:8080/byCategory?category=finance
 ```
 
 ### 2. Adding a New API Entry
 To simulate the addition of a new API entry, use the following endpoint:
 
 ```http
-POST /saveEntry
+POST [/saveEntry](http://localhost:8080/saveEntry)
 Content-Type: application/json
 
 {
@@ -46,6 +46,8 @@ Content-Type: application/json
 }
 ```
 
+Note: It is running on 8080 server port so change it accordinly
+
 Built With
-Spring Boot: The web framework used for building RESTful applications.
-Maven: Dependency management tool used for managing project dependencies.
+##Spring Boot: The web framework used for building RESTful applications.
+##Maven: Dependency management tool used for managing project dependencies.
