@@ -35,13 +35,14 @@ To simulate the addition of a new API entry, use the following endpoint:
 
 ```http
 POST (http://localhost:8080/saveEntry)
+```
 Content-Type: application/json
 
 {
   "API": "Example API",
   "Description": "This is just a sample API entry for demonstration."
 }
-```
+
 
 Note: It is running on 8080 server port so change it accordingly
 
