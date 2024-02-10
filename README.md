@@ -19,9 +19,6 @@ Ensure you have the following installed:
 - Maven 3.2 or higher
 - Spring Boot 2.x
 
-### Installation
-
-No specific installation steps required beyond setting up your development environment with the prerequisites listed above.
 
 ## Usage
 
