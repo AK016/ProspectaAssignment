@@ -10,6 +10,12 @@ Prospecta is a Spring Boot application designed to interact with public APIs by 
 ## Getting Started
 
 Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
+### Installation
+
+1. **Clone the repository**
+
+   Use Git or checkout with SVN using the web URL.
+   git clone https://github.com/AK016/ProspectaAssignment
 
 ### Prerequisites
 
