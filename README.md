@@ -31,10 +31,12 @@ To retrieve a list of APIs by a specific category, use the following endpoint:
 
 ```http
 GET /byCategory?category=Animals
+```
 
 ### 2. Adding a New API Entry
 To simulate the addition of a new API entry, use the following endpoint:
 
+```http
 POST /saveEntry
 Content-Type: application/json
 
@@ -42,6 +44,7 @@ Content-Type: application/json
   "API": "Example API",
   "Description": "This is just a sample API entry for demonstration."
 }
+```
 
 Built With
 Spring Boot: The web framework used for building RESTful applications.
