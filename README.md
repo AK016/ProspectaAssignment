@@ -34,7 +34,7 @@ GET http://localhost:8080/byCategory?category=finance
 To simulate the addition of a new API entry, use the following endpoint:
 
 ```http
-POST [/saveEntry](http://localhost:8080/saveEntry)
+POST (http://localhost:8080/saveEntry)
 Content-Type: application/json
 
 {
