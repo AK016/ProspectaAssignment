@@ -46,8 +46,8 @@ Content-Type: application/json
 }
 ```
 
-Note: It is running on 8080 server port so change it accordinly
+Note: It is running on 8080 server port so change it accordingly
 
 Built With
-##Spring Boot: The web framework used for building RESTful applications.
-##Maven: Dependency management tool used for managing project dependencies.
+- Spring Boot: The web framework used for building RESTful applications.
+- Maven: Dependency management tool used for managing project dependencies.
