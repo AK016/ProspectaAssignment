@@ -1,5 +1,10 @@
 package com.CSV;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -9,16 +14,23 @@ public class RecursiveCSVCalculator {
 	private static final Map<String, Integer> keyValues = new HashMap<>();
 
 	public static void main(String[] args) {
-		String[] entries = { "A1: 5", "A2: 7", "A3: 9", "B1: 3", "B2: 8", "B3: =4+5", "C1: =5+A1", "C2: =A2+B2",
-				"C3: =C2+B3" };
+		String inputFilePath = "src\\Input.csv"; // Input file path
+		String outputFilePath = "src\\Output.csv"; // Output file path
 
-		// Process each entry to either calculate its value or directly store it
-		for (String entry : entries) {
-			processEntry(entry);
+
+		readFileAndProcessEntries(inputFilePath);
+		writeResultsToFile(outputFilePath);
+	}
+
+	private static void readFileAndProcessEntries(String filePath) {
+		try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
+			String line;
+			while ((line = br.readLine()) != null) {
+				processEntry(line);
+			}
+		} catch (IOException e) {
+			System.out.println("An error occurred while reading the file: " + e.getMessage());
 		}
-
-		// Print out all key-value pairs
-		keyValues.forEach((key, value) -> System.out.println(key + ": " + value));
 	}
 
 	public static void processEntry(String entry) {
@@ -48,5 +60,13 @@ public class RecursiveCSVCalculator {
 			}
 		}
 		return sum;
+	}
+
+	private static void writeResultsToFile(String filePath) {
+		try (PrintWriter pw = new PrintWriter(new FileWriter(filePath))) {
+			keyValues.forEach((key, value) -> pw.println(key + ": " + value));
+		} catch (IOException e) {
+			System.out.println("An error occurred while writing to the file: " + e.getMessage());
+		}
 	}
 }
